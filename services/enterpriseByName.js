@@ -5,7 +5,6 @@ const format = require('../utils/formatData');
 const getEnterpriseByName = async (name) => {
     const res = await axios.get(config.enterpriseByName(name));
     const formatedEnterpriseData = format.formatEnterpriseData(res.data)
-    // return res.data;
     return formatedEnterpriseData;
 }
 
