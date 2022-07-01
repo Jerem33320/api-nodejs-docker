@@ -6,3 +6,18 @@ Dans le dossier "config" j'appelle l'url pour que l'utilisateur mette le "query 
 
 Dans notre navigateur, on peut donc tester la route ci-desssous avec le nom d'entreprise "experdeco"
 http://localhost:3000/enterprise?q=experdeco
+
+DOCKER:
+
+Build the image:
+docker build -t october-test-image .
+See the image:
+docker image ls
+Remove the image with id:
+docker image rm <id>
+Run the container:
+docker run -p 3000:3000 -d --name october-test-container october-test-image
+See the container:
+docker ps
+Remove container:
+docker rm october-test-container -f
